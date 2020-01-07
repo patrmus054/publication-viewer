@@ -1,4 +1,4 @@
-package com.example.inzynieria.ui.share
+package com.example.inzynieria.main.ui.favorite
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.inzynieria.R
 
-class ShareFragment : Fragment() {
+class FavoritesFragment : Fragment() {
 
-    private lateinit var shareViewModel: ShareViewModel
+    private lateinit var favoritesViewModel: FavoritesViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        shareViewModel =
-            ViewModelProviders.of(this).get(ShareViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_share, container, false)
-        val textView: TextView = root.findViewById(R.id.text_share)
-        shareViewModel.text.observe(this, Observer {
+        favoritesViewModel =
+            ViewModelProviders.of(this).get(FavoritesViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_favorites, container, false)
+        val textView: TextView = root.findViewById(R.id.text_favorites)
+        favoritesViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

@@ -1,13 +1,13 @@
-package com.example.inzynieria.ui.properties
+package com.example.inzynieria.main.ui.favorite
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class PropertiesViewModel : ViewModel() {
+class FavoritesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is properties Fragment"
+        value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 }

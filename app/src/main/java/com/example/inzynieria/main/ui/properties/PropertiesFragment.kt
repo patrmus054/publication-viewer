@@ -1,4 +1,4 @@
-package com.example.inzynieria.ui.properties
+package com.example.inzynieria.main.ui.properties
 
 import android.os.Bundle
 import android.view.LayoutInflater

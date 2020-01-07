@@ -1,4 +1,4 @@
-package com.example.inzynieria
+package com.example.inzynieria.main
 
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -15,20 +15,23 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.inzynieria.R
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+//    private lateinit var recyclerView: RecyclerView
+//    private lateinit var viewManager: RecyclerView.LayoutManager
+//    private lateinit var viewAdapter: MainAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        toolbar.getOverflowIcon()?.setColorFilter(Color.BLACK , PorterDuff.Mode.SRC_ATOP);
+        toolbar.getOverflowIcon()?.setColorFilter(Color.BLACK , PorterDuff.Mode.SRC_ATOP)
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
@@ -36,25 +39,35 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
-        //?.drawerArrowDrawable?.color = ContextCompat.getColor(this, R.color.colorPrimary)
-
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_favorites, R.id.nav_saved,
-                R.id.nav_properties, R.id.nav_share
+                R.id.nav_home,
+                R.id.nav_favorites,
+                R.id.nav_saved,
+                R.id.nav_properties,
+                R.id.nav_share
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+
+//        viewManager = LinearLayoutManager(this)
+//        viewAdapter = MainAdapter(database.getAllTasks()){
+//            Toast.makeText(this, "${it.title} Clicked", Toast.LENGTH_SHORT).show()
+//        }
+//        recyclerView = findViewById<RecyclerView>(R.id.recyclerView) as RecyclerView
+//
+//        recyclerView.layoutManager = viewManager
+//        recyclerView.adapter = viewAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
 
         menuInflater.inflate(R.menu.main, menu)
         return true

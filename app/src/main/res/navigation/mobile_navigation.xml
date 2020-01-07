@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.inzynieria.ui.home.HomeFragment"
+        android:name="com.example.inzynieria.main.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_favorites"
-        android:name="com.example.inzynieria.ui.favorite.FavoritesFragment"
+        android:name="com.example.inzynieria.main.ui.favorite.FavoritesFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorites" />
 
     <fragment
         android:id="@+id/nav_saved"
-        android:name="com.example.inzynieria.ui.saved.SavedFragment"
+        android:name="com.example.inzynieria.main.ui.saved.SavedFragment"
         android:label="Saved"
         tools:layout="@layout/fragment_saved" />
 
     <fragment
         android:id="@+id/nav_properties"
-        android:name="com.example.inzynieria.ui.properties.PropertiesFragment"
+        android:name="com.example.inzynieria.main.ui.properties.PropertiesFragment"
         android:label="Properties"
         tools:layout="@layout/fragment_properties" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.inzynieria.ui.share.ShareFragment"
+        android:name="com.example.inzynieria.main.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.inzynieria.ui.send.SendFragment"
+        android:name="com.example.inzynieria.main.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.inzynieria.ui.saved
+package com.example.inzynieria.main.ui.saved
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
